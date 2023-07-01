@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-rallycoding",
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0
+  }
+}
