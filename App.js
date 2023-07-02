@@ -1,5 +1,12 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TextInput,
+  ScrollView,
+} from 'react-native';
 
 export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -28,11 +35,13 @@ export default function App() {
       </View>
 
       <View style={styles.goalsContainer}>
-        {courseGoals.map((goal) => (
-          <View style={styles.goal} key={goal}>
-            <Text style={styles.goalText}>{goal}</Text>
-          </View>
-        ))}
+        <ScrollView contentContainerStyle={styles.scrollViewStyles}>
+          {courseGoals.map((goal) => (
+            <View style={styles.goal} key={goal}>
+              <Text style={styles.goalText}>{goal}</Text>
+            </View>
+          ))}
+        </ScrollView>
       </View>
     </View>
   );
@@ -64,10 +73,15 @@ const styles = StyleSheet.create({
   goalsContainer: {
     flex: 5,
   },
+  scrollViewStyles: {
+    width: '100%',
+    alignItems: 'center',
+  },
   goal: {
     backgroundColor: '#ffffff',
-    width: '100%',
+    width: '95%',
     marginTop: 10,
+    marginHorizontal: 'auto',
     paddingVertical: 25,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -78,7 +92,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     shadowOpacity: 0.2,
     shadowColor: '#000000',
-    elevation: 8,
+    elevation: 5,
   },
   goalText: {
     color: '#808080',
