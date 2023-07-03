@@ -4,7 +4,6 @@ export default StyleSheet.create({
   goal: {
     backgroundColor: '#ffffff',
     marginTop: 10,
-    marginHorizontal: 'auto',
     paddingVertical: 25,
     paddingHorizontal: 20,
     borderRadius: 10,
@@ -17,9 +16,15 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     elevation: 5,
   },
+  pressedGoal: {
+    backgroundColor: '#651fff',
+  },
   goalText: {
     color: '#808080',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  pressedGoalText: {
+    color: '#ffffff',
   },
 });
