@@ -25,7 +25,14 @@ const GoalInput = (props) => {
           style={styles.textInput}
           onChangeText={goalInputHandler}
         />
-        <Button title="Add Goal" onPress={addGoalHandler} />
+        <View style={styles.buttonsContainer}>
+          <View style={styles.buttons}>
+            <Button title="Add Goal" onPress={addGoalHandler} />
+          </View>
+          <View style={styles.buttons}>
+            <Button title="Cancel" />
+          </View>
+        </View>
       </View>
     </Modal>
   );

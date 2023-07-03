@@ -3,18 +3,29 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   inputContainer: {
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
     margingBottom: 24,
+    padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc',
   },
   textInput: {
-    width: '70%',
-    marginRight: 8,
+    width: '100%',
     padding: 8,
     borderWidth: 1,
     borderColor: '#cccccc',
+    borderRadius: 5,
+  },
+  buttonsContainer: {
+    width: '100%',
+    marginTop: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 25,
+  },
+  buttons: {
+    width: '40%',
   },
 });
