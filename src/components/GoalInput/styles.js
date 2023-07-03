@@ -8,8 +8,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     margingBottom: 24,
     padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#cccccc',
   },
   textInput: {
     width: '100%',

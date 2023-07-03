@@ -13,6 +13,7 @@ const GoalInput = (props) => {
     if (enteredGoalText === '') return;
 
     props.onAddGoal(enteredGoalText);
+    props.closeModal();
     setEnteredGoalText('');
   }
 
@@ -27,10 +28,10 @@ const GoalInput = (props) => {
         />
         <View style={styles.buttonsContainer}>
           <View style={styles.buttons}>
-            <Button title="Add Goal" onPress={addGoalHandler} />
+            <Button title="Add Goal" color="#651fff" onPress={addGoalHandler} />
           </View>
           <View style={styles.buttons}>
-            <Button title="Cancel" />
+            <Button title="Cancel" color="#651fff" onPress={props.closeModal} />
           </View>
         </View>
       </View>
