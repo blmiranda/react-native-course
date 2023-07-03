@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native';
+import { Text, Pressable } from 'react-native';
 import styles from './styles.js';
 
 const GoalItem = (props) => {
